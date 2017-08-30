@@ -5,10 +5,12 @@
     <title>Crystal Game</title>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    
+<!--JQuery-->
+    
+<script src="https://code.jquery.com/jquery.js"></script>
 
-  <!-- JQuery -->
-  <script src="https://code.jquery.com/jquery.js"></script>
-
+  
 <!-- CSS Style Sheet -->
 
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
@@ -94,10 +96,7 @@
     </div>
   </div>         
 </div>
-    
-    
-    
-    <script type="text/javascript">
+    <script>
         
         $(document).ready(function(){
         var gameNumber = " ";
@@ -111,60 +110,63 @@
      $("#getNumber").html(gameNumber);
             
     });
-         
+        
         
      $(".whiteGem").on("click", function(){
        var myArr = Array(12).join().split(',').map(function(a){return this.i++},{i:1});
        var gemNumber = myArr[Math.floor(Math.random() * myArr.length)];
-       $(".s2").html(gemNumber)
-         
+       $("#userNum").html(gemNumber)
      });
-      
-//     UNSOLVED: This is supposed to add current user answer to gem value pressed::::::::
-            
-//     var currentValue = $(".s2").text();
-//     var newValue = (currentValue + gemNumber);
-//     $(".s2").text(newValue);   
-            
+          
     $(".blueGem").on("click", function(){
        var myArr = Array(12).join().split(',').map(function(a){return this.i++},{i:1});
        var gemNumber = myArr[Math.floor(Math.random() * myArr.length)];
-       $(".s2").html(gemNumber) 
+       $("#userNum").html(gemNumber) 
      });
             
      $(".redGem").on("click", function(){
        var myArr = Array(12).join().split(',').map(function(a){return this.i++},{i:1});
        var gemNumber = myArr[Math.floor(Math.random() * myArr.length)];
-       $(".s2").html(gemNumber)  
+       $("#userNum").html(gemNumber)  
      });
             
     $(".skyGem").on("click", function(){
        var myArr = Array(12).join().split(',').map(function(a){return this.i++},{i:1});
        var gemNumber = myArr[Math.floor(Math.random() * myArr.length)];
-       $(".s2").html(gemNumber)  
+       $("#userNum").html(gemNumber)  
      });
+
+//     UNSOLVED: This is supposed to add current user answer to gem value pressed::::::::
+            
+//     var currentValue = $(".s2").text();
+//     var newValue = (currentValue + gemNumber);
+//     $(".s2").text(newValue);                     
+            
             
             
 //      UNSOLVED - This is supposed to determine whether user wins or loses, then restarts the game:::::
             
-    $(".whiteGem", ".blueGem", ".redGem", ".skyGem").on("click", function(){
-        $("#getNumber").html(NNEDSOMETHINGINHERE);
-        
-        if (getNumber === gamenumber){
+            
+        if (gemNumber === gameNumber){
             wins++;
-        } if else {
-            (getNumber >+ gamenumber)
+            alert("You Won!")
+    } else {
+            (gemNumber >= gameNumber)
             losses++;
+            alert("You loss, try again")
         }
     });
-     
         
-        
-        }         
-         
-    </script>        
+// UNSOLVED: need to restart game                  
+      
+
+    </script>
     
-<!--    <script type="javascript" src="assets/javascript/game.js"> </script>        -->
+    
+    
+<!--    MY JAVASCRIPT ISNT NOT LOADING FROM LINK, UNSURE HOW TO FIX-->
+<!--    <script type="javascript" src='assets/javascript/game.js'> </script>   -->
+    
 </body>
 </html>
             
