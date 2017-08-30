@@ -1,32 +1,85 @@
 <!DOCTYPE html>
-
 <html>
 
-
 <head>
-	<title>Crystal Game</title>
+    <title>Crystal Game</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+  <!-- JQuery -->
+  <script src="https://code.jquery.com/jquery.js"></script>
+
+<!-- CSS Style Sheet -->
 
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-
-	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
+        
 </head>
 
 
-<body>
+    
 
-	<div> </div>
-	<div> </div>
-	<div> </div>
-	<div> </div>
-	<div> </div>
-	<div> </div>
-	<div> </div>
+<body> 
+    
+<!-- Background -->
+      
+ <div class="container">
+     
+<!--Top Header-->
+  <div class="jumbotron">
+     <h2>Crystal Collector</h2>
+      <hr>                      
+	    <!-- directions for game -->
+      <h4>Place the directions here</h4>
+  </div>
+   
+  <div class="row">
+      
+    <div class="leftBox">
+        
+      <div>
+         <button type="button" class="btn">Basic</button>  
+         
+          <h1 id="getNumber"></h1>
+      </div>       
+                  
+      
+        <div>
+          
+        <ul>
+           <img src="assets/images/white-diamond.png" class="whiteGem" id="white"/>
+            
+           <img src="assets/images/blue-diamond.png" class="blueGem"/>
+            
+           <img src="assets/images/red-diamond.png" class="redGem"/>
+            
+           <img src="assets/images/ltblue-diamond.png" class="skyGem"/>
+        </ul>        
+              
+      </div>
+        
+        
+        <div class="rightBox">
 
+            <div>
+              <h3>Wins: </h3>
+              <span id="wins"></span>
+            </div>
+
+            <div>
+              <h3>Losses: </h3>
+              <span id="losses"></span>
+            </div>
+
+        </div>
+        
+    
+      </div>
+     </div>         
+    </div>
+    
+        
+    
+    <script type="javascript" src="assets/javascript/game.js"> </script>        
 </body>
-
-<script type="text/javascript" src="assets/javascript/game.js"></script>
-
 </html>
+            
