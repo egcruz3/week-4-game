@@ -1,29 +1,51 @@
 .jumbotron {
+    margin-top: 10px;
     z-index: 10;
     background-color:rgba(109, 181, 212, 0.76);
+    font-family: serif;
+    text-align: center;
+    color: aliceblue;
     border: 1px solid rgba(73, 162, 195, 0.87);
 }
 
-/*
-.container {
-    border-radius: 5%;
-    border: 1px solid black;
-    background-color: hsla(200, 79%, 60%, 0.2);
-    margin: 10px;
-    height: 500px;
-    width: 400px;
+.leftBox {
+    border: 1px solid rgba(73, 162, 195, 0.87);
+    background-color:rgba(109, 181, 212, 0.76);
+    height: 300px;
+    width: 650px;
+    margin-left: 15px;
+    border-radius: 3%;
 }
-*/
+
+.rightBox{
+    border: 1px solid rgba(73, 162, 195, 0.87);
+    background-color:rgba(109, 181, 212, 0.76);
+    }
+
+.btn{
+    margin: 20px 240px
+}
+
+#getNumber{
+    margin-left: 100px 
+}
 
 
-.diamond {
-    padding: 10px;
-    margin-top: 175px;
+.whiteGem,
+.blueGem,
+.redGem,
+.skyGem{
+    padding: 20px;
+    margin: 40px 10px;
     
 }
 
+.skyGem{
+    padding-right: 45px;
+}
+
 #white{
-    margin-left: 45px;
+    margin-left: 120px;
 }
 
 

@@ -27,9 +27,13 @@
 <!--Top Header-->
   <div class="jumbotron">
      <h2>Crystal Collector</h2>
-      <hr>                      
+        <hr>                      
 	    <!-- directions for game -->
-      <h4>Place the directions here</h4>
+      <h4>
+          <ul>
+          Place the directions here
+          </ul>
+      </h4>
   </div>
    
   <div class="row">
@@ -37,49 +41,130 @@
     <div class="leftBox">
         
       <div>
-         <button type="button" class="btn">Basic</button>  
+         <button type="button" class="btn">Get a Random Number</button>  
          
-          <h1 id="getNumber"></h1>
+          <section class="s1">
+              Computer Number:
+              <h1 id="getNumber"></h1>
+          </section>
+          
+          
+          <section class="s2">
+              User Number:
+              <h1 id="userNum"> </h1>
+          </section>
+          
       </div>       
                   
       
         <div>
           
-        <ul>
-           <img src="assets/images/white-diamond.png" class="whiteGem" id="white"/>
-            
-           <img src="assets/images/blue-diamond.png" class="blueGem"/>
-            
-           <img src="assets/images/red-diamond.png" class="redGem"/>
-            
-           <img src="assets/images/ltblue-diamond.png" class="skyGem"/>
-        </ul>        
-              
+            <ul>
+               <INPUT TYPE="image" class="whiteGem" id="white" SRC="assets/images/white-diamond.png" ALT="SUBMIT"/>
+
+
+               <INPUT TYPE="image" class="blueGem" SRC="assets/images/blue-diamond.png" ALT="SUBMIT"/>
+
+
+               <INPUT TYPE="image" class="redGem" SRC="assets/images/red-diamond.png" ALT="SUBMIT"/>
+
+
+               <INPUT TYPE="image" class="skyGem" SRC="assets/images/ltblue-diamond.png" ALT="SUBMIT"/>
+
+            </ul>        
+
       </div>
         
         
         <div class="rightBox">
 
             <div>
-              <h3>Wins: </h3>
-              <span id="wins"></span>
+                <h3>Wins: </h3>
+                <span id="wins"></span>
             </div>
 
             <div>
-              <h3>Losses: </h3>
-              <span id="losses"></span>
+                <h3>Losses: </h3>
+                <span id="losses"></span>
             </div>
 
         </div>
         
     
-      </div>
-     </div>         
     </div>
+  </div>         
+</div>
     
+    
+    
+    <script type="text/javascript">
         
+        $(document).ready(function(){
+        var gameNumber = " ";
+        var gemNumber = " ";
+            
+            
+        
+    $(".btn").on("click", function() {
+     var myArr = Array(120).join().split(',').map(function(a){return  this.i++},{i:1});
+     var gameNumber = myArr[Math.floor(Math.random () * myArr.length)];
+     $("#getNumber").html(gameNumber);
+            
+    });
+         
+        
+     $(".whiteGem").on("click", function(){
+       var myArr = Array(12).join().split(',').map(function(a){return this.i++},{i:1});
+       var gemNumber = myArr[Math.floor(Math.random() * myArr.length)];
+       $(".s2").html(gemNumber)
+         
+     });
+      
+//     UNSOLVED: This is supposed to add current user answer to gem value pressed::::::::
+            
+//     var currentValue = $(".s2").text();
+//     var newValue = (currentValue + gemNumber);
+//     $(".s2").text(newValue);   
+            
+    $(".blueGem").on("click", function(){
+       var myArr = Array(12).join().split(',').map(function(a){return this.i++},{i:1});
+       var gemNumber = myArr[Math.floor(Math.random() * myArr.length)];
+       $(".s2").html(gemNumber) 
+     });
+            
+     $(".redGem").on("click", function(){
+       var myArr = Array(12).join().split(',').map(function(a){return this.i++},{i:1});
+       var gemNumber = myArr[Math.floor(Math.random() * myArr.length)];
+       $(".s2").html(gemNumber)  
+     });
+            
+    $(".skyGem").on("click", function(){
+       var myArr = Array(12).join().split(',').map(function(a){return this.i++},{i:1});
+       var gemNumber = myArr[Math.floor(Math.random() * myArr.length)];
+       $(".s2").html(gemNumber)  
+     });
+            
+            
+//      UNSOLVED - This is supposed to determine whether user wins or loses, then restarts the game:::::
+            
+    $(".whiteGem", ".blueGem", ".redGem", ".skyGem").on("click", function(){
+        $("#getNumber").html(NNEDSOMETHINGINHERE);
+        
+        if (getNumber === gamenumber){
+            wins++;
+        } if else {
+            (getNumber >+ gamenumber)
+            losses++;
+        }
+    });
+     
+        
+        
+        }         
+         
+    </script>        
     
-    <script type="javascript" src="assets/javascript/game.js"> </script>        
+<!--    <script type="javascript" src="assets/javascript/game.js"> </script>        -->
 </body>
 </html>
             
